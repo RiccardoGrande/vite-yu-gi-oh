@@ -1,12 +1,27 @@
 <script >
+import AppHeader from './components/AppHeader.vue'
 
+export default {
+
+  name: 'App',
+
+  components: {
+    AppHeader,
+
+  }
+
+}
 </script>
 
 <template>
-  <header>
-
-  </header>
+  <AppHeader></AppHeader>
   <main></main>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+</style>

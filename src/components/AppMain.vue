@@ -18,7 +18,7 @@ export default {
             console.log(store.searchURL)
             const url = store.searchURL + `?name=${store.searchURL}`
             console.log(url)
-            store.apiCards(url)
+            return store.apiCards(url)
 
 
         },

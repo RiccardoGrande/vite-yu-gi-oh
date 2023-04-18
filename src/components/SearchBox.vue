@@ -8,7 +8,8 @@ export default {
 <template>
     <div class="searchbox">
         <div class="input-group ">
-            <select name="text" class="form-control" id="" @keyup="$emit('makeSearch')"></select>
+            <select name="text" class="form-control" id="" @keyup="$emit('makeSearch')">{{ url
+            }}</select>
 
 
         </div>

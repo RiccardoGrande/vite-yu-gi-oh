@@ -56,7 +56,7 @@ export default {
             </div>
             <div class="container">
                 <div class="row content">
-                    <div class="col-12">Founded {{ this.store.searchURL.lenght }} cards.</div>
+                    <div class="col-12">Founded {{ }} cards.</div>
                     <div class="col-3" v-for="card in store.cards">
                         <div class="card">
                             <img :src="card.card_images[0].image_url" class="card-img-top" alt="...">

@@ -90,6 +90,10 @@ section,
             padding: 1rem;
         }
 
+        .card {
+            margin: 1rem;
+        }
+
 
         .card-title {
             color: #fff

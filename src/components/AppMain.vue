@@ -10,18 +10,21 @@ export default {
         }
     },
     methods: {
-        apiCall() {
+        apiCards() {
             //console.log(store.searchText)
-            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=10&offset=0')
+            axios.get('https://db.ygoprodeck.com/api/v7/cardinfo.php?num=15&offset=0')
                 .then((response) => {
-                    console.log(response);
+                    console.log(response.data);
+                    store.cards = response.data.data
+                    store.meta = response.data.meta
                 }, (error) => {
                     console.log(error);
                 });
         }
     },
     mounted() {
-        this.apiCall();
+
+        this.apiCards()
     }
 
 
@@ -39,14 +42,13 @@ export default {
             <div class="container">
                 <div class="row">
                     <div class="col-12"></div>
-                    <div class="col">
-                        <div class="card" style="width: 18rem;">
-                            <img src="..." class="card-img-top" alt="...">
+                    <div class="col" v-for="card in store.cards">
+                        <div class="card">
+                            <img :src="card.card_images[0].image_url" class="card-img-top" alt="...">
                             <div class="card-body">
-                                <h5 class="card-title" v-for="item in store">{{ item.name }}</h5>
-                                <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                                    of the card's content.</p>
-                                <a href="#" class="btn btn-primary">Go somewhere</a>
+                                <h5 class="card-title">{{ card.name }}</h5>
+                                <p class="card-text">{{ card.archetype }}</p>
+
                             </div>
                         </div>
                     </div>

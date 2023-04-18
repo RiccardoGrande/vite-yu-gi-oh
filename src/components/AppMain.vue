@@ -56,7 +56,7 @@ export default {
             <div class="container">
                 <div class="row content">
                     <div class="col-12">Founded {{ this.store.searchURL.lenght }} cards.</div>
-                    <div class="col" v-for="card in store.cards">
+                    <div class="col-3" v-for="card in store.cards">
                         <div class="card">
                             <img :src="card.card_images[0].image_url" class="card-img-top" alt="...">
                             <div class="card-body">
@@ -75,11 +75,24 @@ export default {
 
 
 <style lang="scss" scoped>
-section {
+section,
+.card {
     background-color: #d48f38;
+    aspect-ratio: 1;
 
     .content {
         background-color: #fff;
+
+        .col-12 {
+            background-color: #212529;
+            color: #fff;
+            padding: 1rem;
+        }
+
+
+        .card-title {
+            color: #fff
+        }
     }
 }
 </style>

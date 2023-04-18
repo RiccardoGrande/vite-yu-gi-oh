@@ -16,4 +16,9 @@ export default {
 
 
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.searchbox {
+    width: 30%;
+    padding: 1rem 0;
+}
+</style>

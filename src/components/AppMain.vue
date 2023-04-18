@@ -16,9 +16,8 @@ export default {
     methods: {
         performSearch() {
             console.log(store.searchURL)
-            const url = store.searchURL + `?name=${store.searchURL}`
-            console.log(url)
-            return store.apiCards(url)
+
+
 
 
         },

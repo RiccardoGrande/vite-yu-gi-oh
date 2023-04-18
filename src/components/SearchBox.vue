@@ -8,8 +8,13 @@ export default {
 <template>
     <div class="searchbox">
         <div class="input-group ">
-            <select name="text" class="form-control" id="" @keyup="$emit('makeSearch')">{{ this.performSearch
-            }}</select>
+            <select name="text" class="form-control" @change="store.apiCards(store.searchURL)"
+                v-model="this.store.archetype">
+                <options value="">Select Archetype</options>
+                <options value="Alien">Alien</options>
+                <options value="Noble Knight">Noble Knight</options>
+                <options value="Melodius">Melodius</options>
+            </select>
 
 
         </div>

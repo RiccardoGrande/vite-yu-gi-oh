@@ -9,7 +9,7 @@ export default {
     <div class="searchbox">
         <div class="input-group ">
             <select name="text" class="form-control" @change="store.apiCards(store.searchURL)"
-                v-model="this.store.archetype">
+                v-model="this.store.cards.archetype">
                 <options value="">Select Archetype</options>
                 <options value="Alien">Alien</options>
                 <options value="Noble Knight">Noble Knight</options>
